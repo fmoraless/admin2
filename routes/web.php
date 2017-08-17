@@ -29,4 +29,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('products','ProductsController');
+Route::resource('articles','ArticlesController');
+
+Route::get('/', 'HomeController@index');// so when you logged out it go back 
+Route::get('/home', 'HomeController@index');
