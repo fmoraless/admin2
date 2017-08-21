@@ -8,12 +8,12 @@
                 <div class="panel-heading">Productos</div>
 
                 <div class="panel-body">
-                    
+
                     <div class="row">
                         @foreach($articles as $article)
                         <div class="item  col-xs-4 col-lg-4">
                             <div class="thumbnail">
-                                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                                <img class="group list-group-image" src="{{ asset('storage/'.$article->image) }}" alt="" />
                                 <div class="caption">
                                     <h4 class="group inner list-group-item-heading">
                                         {{$article->name}}</h4>
@@ -25,7 +25,9 @@
                                                 ${{$article->price}}</p>
                                         </div>
                                         <div class="col-xs-12 col-md-6">
-                                            <a class="btn btn-success" href="#">Añadir</a>
+                                            <a class="btn btn-success" href="{{ route('cart-add', $article->name) }}">
+                                                <i class="glyphicon glyphicon-plus "></i> Añadir
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -38,8 +40,9 @@
                         páginas {{ $articles->currentPage() }}
                         de {{ $articles->lastPage() }}
                     </p>
-                    
-                   
+                    {!! $articles->render() !!}
+
+
                 </div>
             </div>
         </div>

@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class CotizacionCart extends Model
 {
+    //Mass Assignment
     protected $fillable = ["status"];
+    
+    public function articlesSize() {
+        return $this->id;
+    }
     
     public static function findOrCreateBySessionID($cotizacion_cart_id) {
         if($cotizacion_cart_id)
@@ -14,7 +19,7 @@ class CotizacionCart extends Model
             return CotizacionCart::findbySession ($cotizacion_cart_id);
         else
             // crear un carro de cotizacion
-            return CotizacionCart::createWithoutSession ();
+            return CotizacionCart::createWithoutSession();
     }
     
     public static function findbySession($cotizacion_cart_id){
