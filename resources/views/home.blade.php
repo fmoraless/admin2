@@ -8,7 +8,7 @@
                 <div class="panel-heading">Productos</div>
 
                 <div class="panel-body">
-
+                    
                     <div class="row">
                         @foreach($articles as $article)
                         <div class="item  col-xs-4 col-lg-4">
@@ -25,8 +25,8 @@
                                                 ${{$article->price}}</p>
                                         </div>
                                         <div class="col-xs-12 col-md-6">
-                                            <a class="btn btn-success" href="{{ route('cart-add', $article->name) }}">
-                                                <i class="glyphicon glyphicon-plus "></i> Añadir
+                                            <a class="btn btn-success" href="#">
+                                                <i class="glyphicon glyphicon-plus"></i> Añadir
                                             </a>
                                         </div>
                                     </div>
@@ -41,8 +41,7 @@
                         de {{ $articles->lastPage() }}
                     </p>
                     {!! $articles->render() !!}
-
-
+                   
                 </div>
             </div>
         </div>

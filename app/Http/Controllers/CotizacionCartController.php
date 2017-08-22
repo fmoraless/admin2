@@ -29,7 +29,7 @@ class CotizacionCartController extends Controller
         $article->quantity = 1;
         $cart[$article->name] = $article;
         \Session::put('cart', $cart);
-        
+    
         return redirect()->route('cart-show');
     }
     

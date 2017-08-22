@@ -9,9 +9,8 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 .article{
-    width: 400px;
+    width: 500px;
     max-width: 100%;
-    height: 300px;
     padding: 1em;
     position: relative;
     
@@ -19,9 +18,4 @@
         padding-bottom: 10px;
         border-bottom: solid 1px;
     }
-}
-
-.thumbnail{
-    width: 500px;
-    max-width: 100%;
 }
