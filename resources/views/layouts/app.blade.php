@@ -49,8 +49,9 @@
                         @else
                             <li><a href="#">
                                     <i class="glyphicon glyphicon-shopping-cart"></i>Cotización
-                                    <span class="circle-cotizacion-cart"></span>
-                                    
+                                    <span class="circle-cotizacion-cart">
+                                        {{$cotizacion_cart->articlesSize()}}
+                                    </span>
                                 </a>
                             </li>
                             <li class="dropdown">

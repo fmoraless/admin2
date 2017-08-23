@@ -169,6 +169,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         TCG\Voyager\VoyagerServiceProvider::class,
+        App\Providers\CotizacionCartProvider::class,
 
         /*
          * Application Service Providers...

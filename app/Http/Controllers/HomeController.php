@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Article;
 use App\CotizacionCart;
+use App\Article;
 
 class HomeController extends Controller
 {
@@ -26,11 +26,12 @@ class HomeController extends Controller
     public function index()
     {
         
-//        $cotizacion_cart = CotizacionCart::return CotizacionCart::findBySession(null);
+        
+        
         
         $articles = \App\Article::paginate();
 //        return view("articles.index",["articles" => $articles]);
         return view('home', compact('articles'));
-//        return view('home', ["cotizacion_cart" => $cotizacion_cart]);
+        
     }
 }
