@@ -7,10 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class CotizacionCart extends Model {
 
     // Mass assignment
-    protected $fillable = ["status"];
+    protected $fillable = ['status'];
+    
+    public function in_cotizacion_carts() {
+        return $this->hasMany('App\InCotizacionCart');
+    }
+    
+    public function articles() {
+        return $this->belongsToMany('App\Article', 'in_cotizacion_carts');
+    }
 
     public function articlesSize() {
-        return 3;
+        return $this->articles()->count();
     }
 
     public static function findOrCreateBySessionID($cotizacion_cart_id) {

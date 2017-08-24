@@ -31,5 +31,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('articles','ArticlesController');
 
+Route::resource('in_cotizacion_carts','InCotizacionCartsController',[
+   'only' => ['store', 'destroy'] 
+]);
+
 Route::get('/', 'HomeController@index');// so when you logged out it go back 
 Route::get('/home', 'HomeController@index');
