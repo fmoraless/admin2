@@ -14,7 +14,7 @@
                     {{$article->description}}
                 </p>
                 <p>
-                    <a href="" class="btn btn-success">Agregar a Cotización</a>
+                    @include("in_cotizacion_carts.form", ["article" => $article])
                 </p>
             </div>
         </div>

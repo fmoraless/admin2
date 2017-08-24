@@ -25,9 +25,13 @@
                                                 ${{$article->price}}</p>
                                         </div>
                                         <div class="col-xs-12 col-md-6">
-                                            <a class="btn btn-success" href="#">
-                                                <i class="glyphicon glyphicon-plus"></i> Añadir
-                                            </a>
+                                            <p>
+<!--                                            <a class="btn btn-success" href="">-->
+<!--                                                <i class="glyphicon glyphicon-plus"></i> Añadir-->
+                                                @include("in_cotizacion_carts.form", ["article" => $article])
+                                                
+                                                <!--                                            </a>-->
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
